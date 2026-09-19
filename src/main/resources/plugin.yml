@@ -1,0 +1,18 @@
+name: NexusPurgatory
+version: ${project.version}
+main: com.nexuscraft.nexuspurgatory.NexusPurgatoryPlugin
+api-version: '1.21'
+author: Nexus Universe
+description: List specific players by Java username and/or Xbox/Bedrock gamertag in config.yml -- and only those players -- to place them under an escalating curse of debuffs (capped health, hunger drain, near-guaranteed-lethal mob damage, slowness, inventory jumbling, item drain, and periodic extra effects) until an admin removes their name and reloads. Nobody not listed is ever affected.
+softdepend: [floodgate]
+
+commands:
+  nexuspurgatory:
+    description: Check who's currently cursed, or reload config.yml. Both require nexuspurgatory.admin -- there is deliberately no in-game way to add or remove a target; that's config.yml's job alone.
+    aliases: [purgatory, nexuscurse]
+    usage: /nexuspurgatory <status|reload>
+
+permissions:
+  nexuspurgatory.admin:
+    description: Check curse status and reload NexusPurgatory's config.
+    default: op
